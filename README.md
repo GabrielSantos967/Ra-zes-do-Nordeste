@@ -35,73 +35,20 @@ A pasta `app` contém os arquivos principais da aplicação, incluindo os módul
 
 O banco de dados utilizado é o PostgreSQL, disponibilizado pelo Supabase. Algumas operações também utilizam funções SQL para executar as regras de negócio.
 
-Principais rotas
+## Principais rotas
 
-Método
-
-Rota
-
-Descrição
-
-POST
-
-/auth/cadastro
-
-Cadastro de usuário
-
-POST
-
-/auth/login
-
-Login
-
-GET
-
-/auth/me
-
-Dados do usuário autenticado
-
-GET
-
-/auth/admin
-
-Acesso administrativo
-
-POST
-
-/pedidos
-
-Cadastro de pedido
-
-GET
-
-/pedidos
-
-Consulta de pedidos
-
-PATCH
-
-/pedidos/{pedido_id}/status
-
-Atualização do status
-
-POST
-
-/pedidos/{pedido_id}/cancelar
-
-Cancelamento de pedido
-
-POST
-
-/pagamentos/mock
-
-Simulação de pagamento
-
-POST
-
-/estoque/movimentacoes
-
-Movimentação de estoque
+| Método | Rota | Descrição |
+|---|---|---|
+| POST | /auth/cadastro | Cadastro de usuário |
+| POST | /auth/login | Login |
+| GET | /auth/me | Dados do usuário autenticado |
+| GET | /auth/admin | Acesso administrativo |
+| POST | /pedidos | Cadastro de pedido |
+| GET | /pedidos | Consulta de pedidos |
+| PATCH | /pedidos/{pedido_id}/status | Atualização do status |
+| POST | /pedidos/{pedido_id}/cancelar | Cancelamento de pedido |
+| POST | /pagamentos/mock | Simulação de pagamento |
+| POST | /estoque/movimentacoes | Movimentação de estoque |
 
 As demais rotas podem ser consultadas pelo Swagger.
 
@@ -111,9 +58,9 @@ Para executar o projeto localmente, é necessário ter o Python instalado e conf
 
 Depois de instalar as dependências do projeto, o servidor pode ser iniciado pelo terminal com o comando:
 
-
+```powershell
 python -m uvicorn app.main:app --reload
-
+```
 
 Com o servidor em execução, a documentação da API fica disponível em:
 
